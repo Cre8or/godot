@@ -145,6 +145,7 @@ void ScriptTextEditor::apply_code() {
 	}
 	script->set_source_code(code_editor->get_text_editor()->get_text());
 	script->update_exports();
+	_validate_script();
 	code_editor->get_text_editor()->get_syntax_highlighter()->update_cache();
 }
 
